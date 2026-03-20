@@ -86,3 +86,7 @@ Fully deployed and accessible online
 
 🌐 Live Application
 👉 https://kalnet-intern-assignment.vercel.app
+
+📌 Conclusion
+
+This project demonstrates how AI-like systems can be designed using structured logic, even without direct API dependency, focusing on clarity, usability, and real-world execution support.
