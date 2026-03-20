@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 📌 Project Overview
 
-## Getting Started
+1. KALNET Intern Assignment is an AI-inspired web application that transforms vague user ideas into clear, structured execution strategies.
 
-First, run the development server:
+Users input an unstructured thought (e.g., "I want to build an AI app"), and the system intelligently converts it into:
 
+- 🎯 Clear goal definition  
+- 🧠 Execution approach  
+- 📋 Step-by-step plan  
+- ⚠️ Missing elements analysis  
+- ⚡ Actionable steps  
+- ⏳ Timeline estimation  
+- 📊 Clarity score  
+
+This helps users move from **idea → execution** effectively.
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
 ```bash
+git clone https://github.com/YOUR_USERNAME/KALNET Intern Assignment.git
+cd explain-my-plan
+2. Install dependencies
+npm install
+3. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+4. Open in browser
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧠 Prompt Design (System Logic)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application simulates an AI system that converts vague input into structured outputs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Instead of returning raw text, the system enforces a strict structured format, similar to how real LLM prompts are engineered.
 
-## Learn More
+The output is divided into:
 
-To learn more about Next.js, take a look at the following resources:
+Goal → Defines the user's intention clearly
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Approach → Strategic way to execute
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Steps → Logical breakdown of execution
 
-## Deploy on Vercel
+Missing Elements → Identifies gaps in thinking
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Action Steps → Immediate next actions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Timeline → Estimated duration
+
+This design ensures:
+Consistency in responses
+Readability
+Actionability
+Even without live API calls, the logic mimics real-world prompt engineering practices.
+
+📊 Clarity Score Logic
+
+The clarity score evaluates how well-defined the user's input is.
+It is calculated dynamically using:
+1. Input Length
+Longer inputs indicate better clarity
+Contributes up to 40 points
+2. Keywords Presence
+Detects meaningful words like "build", "app", "system", "plan"
+Adds up to 20 points
+3. Detail Level
+Based on number of words
+Adds up to 30 points
+Final Formula:
+Clarity Score = Length Score + Keyword Score + Detail Score
+(Max capped at 100)
+Behavior:
+Vague input → Low score
+Detailed input → High score
+This simulates how AI systems assess input quality.
+
+🚀 Features:-
+
+Converts vague ideas into structured execution plans
+Highlights missing components in user thinking
+Provides actionable next steps
+Dynamic clarity scoring system
+Clean and modern UI (Tailwind CSS)
+Fully deployed and accessible online
+
+🌐 Live Application
+👉 https://kalnet-intern-assignment.vercel.app
